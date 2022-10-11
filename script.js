@@ -1,15 +1,10 @@
-const text = "Welcome to my web!!!<3";
+var open = document.getElementById("open");
+var close = document.getElementById("close");
+var container = document.getElementById("container");
 
-let index = 0;
-
-var writeText = () => {
-  document.body.innerText = text.slice(0, index);
-
-  index++;
-
-  if (index > text.length) {
-    index = 0;
-  }
-};
-
-setInterval(writeText, 100);
+open.addEventListener("click", () => {
+  container.classList.add("active");
+});
+close.addEventListener("click", () => {
+  container.classList.remove("active");
+});
